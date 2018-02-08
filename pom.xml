@@ -93,6 +93,11 @@
 			<artifactId>tomcat-jdbc</artifactId>
 			<version>${tomcat-jdbc.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.aggregate</groupId>
+			<artifactId>jetty-all</artifactId>
+			<version>9.2.14.v20151106</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -67,5 +67,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.jdt.core.compiler:ecj:P20140317-1600" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jdbc:7.0.54" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:7.0.54" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty.aggregate:jetty-all:9.2.14.v20151106" level="project" />
+    <orderEntry type="library" name="Maven: javax.websocket:javax.websocket-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
   </component>
 </module>
