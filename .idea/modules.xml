@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hermes.iml" filepath="$PROJECT_DIR$/.idea/hermes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-common/hermes-common.iml" filepath="$PROJECT_DIR$/hermes-common/hermes-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-console/hermes-console.iml" filepath="$PROJECT_DIR$/hermes-console/hermes-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-main/hermes-main.iml" filepath="$PROJECT_DIR$/hermes-main/hermes-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-model/hermes-model.iml" filepath="$PROJECT_DIR$/hermes-model/hermes-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-repository/hermes-repository.iml" filepath="$PROJECT_DIR$/hermes-repository/hermes-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hermes-service/hermes-service.iml" filepath="$PROJECT_DIR$/hermes-service/hermes-service.iml" />
     </modules>
   </component>
 </project>

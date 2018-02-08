@@ -11,7 +11,7 @@
 	<url>https://www.jlfex.com</url>
 
 	<repositories>
-		<repository>
+		<!--<repository>
 			<id>central</id>
 			<url>https://repo1.maven.org/maven2</url>
 			<releases>
@@ -21,14 +21,14 @@
 		<repository>
 			<id>oschina</id>
 			<url>http://maven.oschina.net/content/groups/public</url>
-		</repository>
+		</repository>-->
 		<repository>
 			<id>self</id>
 			<name>self</name>
 			<url>file://repository</url>
 		</repository>
 	</repositories>
-	<pluginRepositories>
+	<!--<pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
 			<url>https://repo1.maven.org/maven2</url>
@@ -40,7 +40,7 @@
 			<id>plugin-oschina</id>
 			<url>http://maven.oschina.net/content/groups/public</url>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories>-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

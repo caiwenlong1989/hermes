@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/jlfex/hermes.svg?branch=master)](https://travis-ci.org/jlfex/hermes)
+[![Build Status]()]()
 ## 项目介绍
-[开源p2p软件](https://github.com/jlfex/hermes)
+[开源p2p软件](https://github.com/caiwenlong1989/hermes)
 ### Hermes为快速搭建专业的P2P平台提供完美解决方案。
 - 支持企业快速搭建网络投融资平台
 - 完全覆盖发标、审核、投标、放款、还款、转让等投融资业务全流程
@@ -36,11 +36,11 @@
 - linux下执行chmod +x quick-start.sh&&./quick-start.sh
 
 ##演示地址
-* [前台演示](http://58.247.5.228:8105/hermes-main)
-* [后台演示](http://58.247.5.228:8106/hermes-console)
+* [前台演示]()
+* [后台演示]()
 
 ##如何贡献
-* [编码规范](https://github.com/jlfex/hermes/wiki/编码规范)
-* [贡献步骤](https://github.com/jlfex/hermes/wiki/如何贡献)
+* [编码规范]()
+* [贡献步骤]()
 
 ![test](https://github.com/jlfex/hermes/wiki/images/logo.png)
