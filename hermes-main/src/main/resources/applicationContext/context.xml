@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+		
+	<context:component-scan base-package="com.jlfex.hermes">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:messages-model</value>
+				<value>classpath:messages-service</value>
+				<value>classpath:messages</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+	<!-- 邮件配置 -->
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="protocol" value="${email.protocol}"></property>
+		<property name="host" value="${email.host}"></property>
+		<property name="port" value="${email.port}"></property>
+		<property name="username" value="${email.username}"></property>
+		<property name="password" value="${email.password}"></property>
+		<property name="defaultEncoding" value="${email.defaultEncoding}" />
+		<property name="javaMailProperties">
+		<props>
+            <prop key="mail.${email.protocol}.auth">${email.auth}</prop>
+        </props>
+       </property>
+     </bean>
+     <bean id="emailService" class="com.jlfex.hermes.common.mail.EmailServiceImpl">
+	     <property name="javaMailSender" ref="javaMailSender"></property>
+		 <property name="systemEmail" value="${email.systemEmail}"></property>
+	 </bean>
+</beans>
