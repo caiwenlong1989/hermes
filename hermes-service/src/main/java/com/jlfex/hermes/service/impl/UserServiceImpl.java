@@ -211,6 +211,7 @@ public class UserServiceImpl extends PasswordEncoder implements UserService {
 		root.put("service_tel", App.config("site.service.tel"));
 		root.put("platName", App.config("app.operation.name"));
 		root.put("expireHour", calcuEmailExpireHour());
+		root.put("validateCode", validateCode);
 		return root;
 	}
 
@@ -269,7 +270,8 @@ public class UserServiceImpl extends PasswordEncoder implements UserService {
 	@Override
 	public Result<?> signIn(User signUser) {
 		Result<String> result = new Result<String>();
-		User user = userRepository.findByEmail(signUser.getEmail());
+//		User user = userRepository.findByEmail(signUser.getEmail());
+		User user = userRepository.findByCellphone(signUser.getCellphone()).get(0);
 		// 账户不存在
 		try {
 			if (user == null) {

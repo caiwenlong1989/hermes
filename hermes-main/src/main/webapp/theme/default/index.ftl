@@ -39,7 +39,8 @@ $(function(){
 					<h3><@messages key="index.sign.in.quick" /></h3>
 					<div class="form-group">
 						<label for="email" class="sr-only">email</label>
-						<input id="email" name="email" type="email" placeholder="<@messages key="index.sign.in.account.hint" />" class="form-control">
+						<!-- <input id="email" name="email" type="email" placeholder="<@messages key="index.sign.in.account.hint" />" class="form-control"> -->
+						<input id="email" name="cellphone" type="text"  placeholder="<@messages key="sign.up.cellphone" />" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="signPassword" class="sr-only">password</label>

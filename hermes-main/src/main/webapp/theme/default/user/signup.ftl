@@ -182,6 +182,10 @@ $(function(){
 			  <div class="m_item"><span class="mv_msg">${errMsg!} </span></div>
 			</#if>
 			<div class="m_item">
+				<input id="cellphone" name="cellphone" type="text" value="<@messages key="sign.up.cellphone" />"  class="mv_mobile"/>
+				 <span class="mv_msg"></span>
+			</div>
+			<div class="m_item" style="display: none;">
 				<input id="email" name="email" type="text" value="<@messages key="sign.up.email" />"  class="mv_email"/>
 				  <span class="mv_msg"></span>
 			</div>
@@ -202,10 +206,6 @@ $(function(){
 			</div>
 			<div class="m_item">
 				<input id="account" name="account" type="text" value="<@messages key="sign.up.nickname" />"  class="mv_name"/>
-				 <span class="mv_msg"></span>
-			</div>
-			<div class="m_item">
-				<input id="cellphone" name="cellphone" type="text" value="<@messages key="sign.up.cellphone" />"  class="mv_mobile"/>
 				 <span class="mv_msg"></span>
 			</div>
 			<div class="m_item">

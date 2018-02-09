@@ -27,7 +27,8 @@
 				<p class="error-message"></p>
 				<div class="form-group">
 					<label for="email" class="sr-only">email</label>
-					<input id="email" name="email" type="email"  placeholder="<@messages key="index.sign.in.account.hint" />" class="form-control">
+					<!-- <input id="email" name="email" type="email"  placeholder="<@messages key="index.sign.in.account.hint" />" class="form-control"> -->
+					<input id="email" name="cellphone" type="text"  placeholder="<@messages key="sign.up.cellphone" />" class="form-control">
 					<p class="help-block"></p>
 				</div>
 				<div class="form-group">

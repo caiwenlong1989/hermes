@@ -132,16 +132,23 @@ public class UserController {
 			return "user/signup";
 		}
 		model.addAttribute("email", user.getEmail());
-		try {
-			String generateMail = ModelLoader.process("mail_active.ftl", userService.getActiveMailModel(user, request));
-			emailService.sendEmail(user.getEmail(), "注册用户激活", generateMail);
-		} catch (Exception e) {
-			commonMessage = "激活邮件发送失败,请重新发送!";
-			Logger.error(commonMessage, e);
-			model.addAttribute("errMsg", commonMessage);
-			return "user/signup-success";
+		// 由于需求变更，注册登录均采用手机号码，所以用户无需邮箱激活
+//		try {
+//			String generateMail = ModelLoader.process("mail_active.ftl", userService.getActiveMailModel(user, request));
+//			emailService.sendEmail(user.getEmail(), "注册用户激活", generateMail);
+//		} catch (Exception e) {
+//			commonMessage = "激活邮件发送失败,请重新发送!";
+//			Logger.error(commonMessage, e);
+//			model.addAttribute("errMsg", commonMessage);
+//			return "user/signup-success";
+//		}
+//		return "user/signup-success";
+		Map<String, Object> map = userService.getActiveMailModel(user, request);
+		Result<?> result = userService.activeMail(user.getId(), (String) map.get("validateCode"));
+		if (result.getType().equals(Type.SUCCESS)) {
+			Logger.info("手机注册成功，邮件自动激活成功");
 		}
-		return "user/signup-success";
+		return "redirect:/userIndex/skipSignIn";
 	}
 
 	/**
